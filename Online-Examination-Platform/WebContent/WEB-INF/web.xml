@@ -5,12 +5,15 @@
     <welcome-file>/WEB-INF/view/student-register-form.jsp</welcome-file>
   </welcome-file-list>
   
-  <servlet>
+<!--   <servlet>
   	<servlet-name>abc</servlet-name>
-  	<servlet-class>com/student/controller/StudentRegister</servlet-class>
+  	<servlet-class>com.student.controller.StudentRegister</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>abc</servlet-name>
   	<url-pattern>/registerStudent</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
+  
+  
+  
 </web-app>

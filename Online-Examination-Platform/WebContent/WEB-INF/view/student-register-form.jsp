@@ -25,7 +25,7 @@
 		<br/>
 		<input type="password" placeholder="Retype Password" name="repassword" /><br/>
 		<br/>
-		<input type="button" value="Submit" />
+		<input type="submit" value="Submit" />
 	
 	</form>
 	

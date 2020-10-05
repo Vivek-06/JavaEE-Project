@@ -24,6 +24,17 @@ public class Student {
 		this.password = password;
 		this.repassword = repassword;
 	}
+	
+	
+
+	public Student(int id, String name, String course, String department, String email) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.course = course;
+		this.department = department;
+		this.email = email;
+	}
 
 	public int getId() {
 		return id;

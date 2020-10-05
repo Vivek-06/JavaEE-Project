@@ -13,21 +13,13 @@ import com.student.service.StudentService;
 /**
  * Servlet implementation class StudentRegister
  */
-@WebServlet("/studentRegister")
+@WebServlet(urlPatterns = "/studentRegister")
 public class StudentRegister extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	private Student student;
 	private StudentService studentService;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public StudentRegister() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -47,6 +39,17 @@ public class StudentRegister extends HttpServlet {
 		studentService.registerStudent(student);
 
 		student.toString();
+		
+		request.setAttribute("students", studentService.displayStudent());
+		request.getRequestDispatcher("/WEB_INF/view/Student-Details-Display.jsp").forward(request, response);
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		request.setAttribute("students", studentService.displayStudent());
+		request.getRequestDispatcher("/WEB_INF/view/Student-Details-Display.jsp").forward(request, response);
+		
 	}
 
 }
